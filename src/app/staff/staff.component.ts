@@ -26,7 +26,7 @@ export class StaffComponent implements OnInit {
 	ngOnInit(): void {
 		this._service.getAllEmployees()
 			.subscribe(response => {
-				this.employees = response['data']
+				this.employees = response['data'];
 			})
 	}
 	onSelect(employee: any) {
@@ -46,13 +46,13 @@ export class StaffComponent implements OnInit {
 			console.log(result);
 			this.closeResult = `${result}`;
 		}, () => {
-			this.newEmployeeForm.setValue({name: '', salary:'', age :''})
+			this.newEmployeeForm.setValue({name: '', salary:'', age :''});
 		})
 	}
 	createEmployee(){
 		this._service.createEmployee(this.newEmployeeForm.value).subscribe(response => {
-			alert(`Status: ${response['status']}\nMessage: ${JSON.stringify(response['data'])} `)
-			this._modalService
+			alert(`Status: ${response['status']}\nMessage: ${JSON.stringify(response['data'])} `);
+			this._modalService;
 		})
 		this.ngOnInit;
 	}
