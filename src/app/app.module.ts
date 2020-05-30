@@ -10,6 +10,8 @@ import { EmployeesService } from './employees.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AboutComponent,
     StaffComponent,
     EmployeeDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [EmployeesService],
   bootstrap: [AppComponent]

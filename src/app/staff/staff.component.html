@@ -1,24 +1,55 @@
-<button type="button" class="btn btn-primary" style="padding: 10px; margin: 20px;">
-	Create Employee
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Crear Empleado</h4>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<form [formGroup]="newEmployeeForm"> 
+			<div class="form-group">
+				<label for="name" style="padding-top: 20px;">Nombre</label>
+				<div class="input-group">
+					<input id="name" class="form-control" placeholder="John Doe" name="name" formControlName="name" required>
+				</div>
+				<label for="salary" style="padding-top: 20px;">Salario</label>
+				<div class="input-group">
+					<input id="salary" type="number" class="form-control"  name="salary" formControlName="salary" required>
+				</div>
+				<label for="age" style="padding-top: 20px;">Edad</label>
+				<div class="input-group">
+					<input id="age" type="number" class="form-control" placeholder="21" name="age" formControlName="age" required>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-primary" (click)="createEmployee()">Crear </button>
+	</div>
+</ng-template>
+<button type="button" class="btn btn-primary" style="padding: 10px; margin: 20px;" (click)="openModal(content)">
+	Crear empleado
 </button>
-<table class="table table-light">
+
+<table class="table table-striped">
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">ID</th>
-			<th scope="col">Name</th>
-			<th scope="col">Salary</th>
-			<th scope="col">Age</th>
-			<th scope="col">Delete</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Salario</th>
+			<th scope="col">Edad</th>
+			<th scope="col">Eliminar</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr  *ngFor=" let employee of employees">
+		<tr *ngFor=" let employee of employees">
 			<th (click)="onSelect(employee)">{{employee.id}}</th>
 			<th (click)="onSelect(employee)">{{employee.employee_name}}</th>
 			<th (click)="onSelect(employee)">{{employee.employee_salary}}</th>
 			<th (click)="onSelect(employee)">{{employee.employee_age}}</th>
-			<button type="button" class="btn btn-danger" style="margin: 10px;" (click)="deleteEmployee(employee)">
-				Delete
+			<button type="button" class="btn btn-danger" style="margin: 10px;"
+				(click)="deleteEmployee(employee)">
+				Eliminar
 			</button>
 		</tr>
 	</tbody>

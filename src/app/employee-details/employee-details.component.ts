@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { EmployeesService } from '../employees.service';
-import { computeMsgId } from '@angular/compiler';
 
 @Component({
 	selector: 'app-employee-details',
@@ -18,11 +17,9 @@ export class EmployeeDetailsComponent implements OnInit {
 		this.route.paramMap.subscribe((params: ParamMap) =>{
 			this.employeeId = parseInt(params.get('id'))
 		});
+
 		this._service.getEmployeeByID(this.employeeId)
-		.subscribe(response => {
-			console.log(response);
-			
-		})
+		.subscribe();
 	}
 
 }

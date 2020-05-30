@@ -1,8 +1,9 @@
-import { Injectable, Inject, InjectionToken } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http'
-import { Observable, from } from 'rxjs';
-import { map, retry, catchError } from 'rxjs/operators'
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators'
+
 @Injectable({
 	providedIn: 'root'
 })
@@ -15,10 +16,19 @@ export class EmployeesService {
 		return this._http.get<IEmployee[]>(`${environment.employeeURL}/employees`);
 	}
 	getEmployeeByID(id: number): Observable<IEmployee> {
-		return this._http.get<IEmployee>(`${environment.employeeURL}/employee/${id}`);
+		return this._http.get<IEmployee>(`${environment.employeeURL}/employee/${id}`).pipe(catchError(err => {
+			alert(`Error: ${err.error.message}`)
+			return throwError(err);
+		}));
 	}
 	deleteEmployee(id: number){
-		return this._http.delete(`${environment.employeeURL}/delete/${id}`)	
+		return this._http.delete(`${environment.employeeURL}/delete/${id}`);
+	}
+	createEmployee(response: object){
+		return this._http.post(`${environment.employeeURL}/create`, response).pipe(catchError(err => {
+			alert(`Error: ${err.error.message}`)
+			return throwError(err);
+		}));
 	}
 }
 export interface IEmployee {
