@@ -1,0 +1,26 @@
+<button type="button" class="btn btn-primary" style="padding: 10px; margin: 20px;">
+	Create Employee
+</button>
+<table class="table table-light">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Salary</th>
+			<th scope="col">Age</th>
+			<th scope="col">Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr  *ngFor=" let employee of employees">
+			<th (click)="onSelect(employee)">{{employee.id}}</th>
+			<th (click)="onSelect(employee)">{{employee.employee_name}}</th>
+			<th (click)="onSelect(employee)">{{employee.employee_salary}}</th>
+			<th (click)="onSelect(employee)">{{employee.employee_age}}</th>
+			<button type="button" class="btn btn-danger" style="margin: 10px;" (click)="deleteEmployee(employee)">
+				Delete
+			</button>
+		</tr>
+	</tbody>
+
+</table>
