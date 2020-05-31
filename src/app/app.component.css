@@ -1,0 +1,19 @@
+
+a.nav-link{
+	font-weight: 700;
+	font-size: 16px;
+	color: #dae1e7 !important ;
+}
+a.nav-link:hover{
+	background-color: #00909e;
+	border-radius: 2px;
+	color: #27496d;
+}
+div.navbar-collapse{
+	float: right;
+	margin-left: auto;
+}
+.container-fluid{
+	padding-top: 90px;
+	background-color: #dae1e7;
+}

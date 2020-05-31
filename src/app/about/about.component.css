@@ -1,0 +1,80 @@
+header {
+	padding: 375px 0 0px;
+	height: 600px;
+}
+
+.bg-image {
+	background-image: url("https://i.imgur.com/5FxuknA.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+h1 {
+	color: #dae1e7;
+	font-weight: 800 !important;
+}
+
+p.header {
+	color: #dae1e7;
+	font-weight: lighter;
+	font-size: 25px;
+	font-style: italic !important;
+}
+
+.lead {
+	color: #dae1e7;
+}
+
+p {
+	font-size: large;
+	flex: 50%;
+	font-style: italic;
+}
+
+span {
+	color: #27496d;
+	font-size: xx-large;
+}
+
+span.title {
+	font-weight: bolder;
+	font-style: italic;
+}
+
+.image-large {
+	flex: 50%;
+	width: 100%;
+	height: auto;
+}
+
+.first-square {
+	padding: 20px;
+	background-color: #dae1e7;
+}
+
+.sqr {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+.lttl{
+	font-size: large;
+}
+div.col{
+	-webkit-box-shadow: 9px 10px 12px -9px rgba(0,0,0,0.25);
+	-moz-box-shadow: 9px 10px 12px -9px rgba(0,0,0,0.25);
+	box-shadow: 9px 10px 12px -9px rgba(0,0,0,0.25);
+	border-radius: 20px;
+	margin-bottom: 10px;
+	padding: 0 20px 20 20px	;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.sqr {
+		flex-direction: column;
+	}
+	.row{
+		flex-direction: column;
+	}
+}

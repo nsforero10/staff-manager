@@ -1,24 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="#"><img src="https://global-uploads.webflow.com/5d5c27bb091c3d28b47f2b89/5ec55a31d62b205e2d15d3ea_contabilidad.png" width="168"/></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-	  <ul class="navbar-nav mr-auto">
-	    <li class="nav-item">
-	      <a class="nav-link" routerLink="" routerLinkActive="active">Inicio</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" routerLink="/about" routerLinkActive="active">Sobre nosotros</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" routerLink="/staff" routerLinkActive="active">Empleados</a>
-	    </li>
-	</ul>
-	</div>
-      </nav>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color:#142850; box-shadow: 0 1px 8px 2px rgba(0,0,0,.5);">
+		<a class="navbar-brand" href="#"><img
+				src="https://global-uploads.webflow.com/5d5c27bb091c3d28b47f2b89/5ec55a31d62b205e2d15d3ea_contabilidad.png"
+				width="168" /></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" routerLink="">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " routerLink="/about">Sobre nosotros</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " routerLink="/staff" >Empleados</a>
+				</li>
+			</ul>
+		</div>
+</nav>
 
 <!-- Page Content -->
-<div class="container">
-	<router-outlet></router-outlet>
-</div>
+
+<router-outlet></router-outlet>
