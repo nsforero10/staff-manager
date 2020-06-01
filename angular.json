@@ -24,14 +24,14 @@
               "src/assets"
             ],
             "styles": [
-		"node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
-		"node_modules/jquery/dist/jquery.min.js",
-	    "node_modules/@popperjs/core/dist/umd/popper.min.js",
-	    "node_modules/bootstrap/dist/js/bootstrap.min.js"
-	]
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "staff-manager"
+    }
+  },
+  "defaultProject": "staff-manager",
+  "cli": {
+    "analytics": "82668506-33d3-4a64-87fb-b2025f241597"
+  }
 }
